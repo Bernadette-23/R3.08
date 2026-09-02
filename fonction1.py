@@ -1,13 +1,13 @@
-n1 = int(input("Entrez le nombre 1 : "))
-n2 = int(input("Entrez le nombre 2 : "))
-
 def max (n1 : int, n2 :int) -> int :
     if n1 > n2:
         return n1
     else:
         return n2
 
-print(max(n1, n2))
+if __name__=="__main__":
+    n1 = int(input("Entrez le nombre 1 : "))
+    n2 = int(input("Entrez le nombre 2 : "))
+    print(max(n1, n2))
 
 """
 --> fil d'execution 
