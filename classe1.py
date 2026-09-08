@@ -19,7 +19,6 @@ class Tasse:
 if __name__ == "__main__":
     mc = Tasse("bleu","50","duralex")
     print(mc)
-    print(vars(Tasse))
     print(vars(mc))
     mc.contenu("eau")
     print(mc.contenu)
