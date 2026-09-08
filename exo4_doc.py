@@ -15,12 +15,12 @@ class Velo:
     def gear_up(self):
         if 0 < self.vitesse < self.vitessemax:
             self.vitesse = self.vitesse + 1
-            print(f"la vitesse vaut actuellement {self.vitesse})
+            print(f"la vitesse vaut actuellement {self.vitesse}")
 
     def gear_down(self):
         if 0 < self.vitesse < self.vitessemax:
             self.vitesse = self.vitesse - 1
-            print(f"la vitesse vaut actuellement {self.vitesse})
+            print(f"la vitesse vaut actuellement {self.vitesse}")
 
 
 if __name__ == "__main__":
