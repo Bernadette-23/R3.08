@@ -16,6 +16,8 @@ class Point:
                   # 2eme option --> ((self.__x-x)*(self.__x-x) + (self.__y-y)*(self.__y-y))
         return distance
 
+    def distancePoint(self, camarade : Point):
+
 if __name__ == "__main__":
     p1 = Point(3.2, 1)
     print (p1)
