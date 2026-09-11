@@ -36,8 +36,15 @@ class Cercle:
         self.__surface = 3.14*(self.__rayon*self.__rayon)
         return surface
 
-    def intersection(self,):
-        ddfzfz
+    def intersection(self,autre:Cercle):
+        if self.__centre.distancePoint(autre.__centre) < (self.__rayon + autre.__rayon):
+            return True
+        else:
+            return False
+
+
+
+
 
     def partie(self):
         gdfkd
