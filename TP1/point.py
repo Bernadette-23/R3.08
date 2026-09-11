@@ -16,7 +16,33 @@ class Point:
                   # 2eme option --> ((self.__x-x)*(self.__x-x) + (self.__y-y)*(self.__y-y))
         return distance
 
-    def distancePoint(self, camarade : Point):
+ #   def distancePoint(self, camarade : Point):
+
+class Cercle:
+
+    def __init__(self,centre:Point, rayon:int):
+        self.__centre = Point(centre)
+        self.__rayon = rayon
+
+    def diametre(self,diametre:int):
+        self.__diametre = 2*self.__rayon
+        return diametre
+
+    def perimetre(self,perimetre:int):
+        self.__perimetre = 2*self.__rayon*3.14
+        return perimetre
+
+    def surface(self,surface:int):
+        self.__surface = 3.14*(self.__rayon*self.__rayon)
+        return surface
+
+    def intersection(self,):
+        ddfzfz
+
+    def partie(self):
+        gdfkd
+
+
 
 if __name__ == "__main__":
     p1 = Point(3.2, 1)
