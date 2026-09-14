@@ -47,8 +47,6 @@ class Cercle:
         return self.__centre.distancePoint(A) <= self.__rayon
 
 
-
-
 if __name__ == "__main__":
     p1 = Point(3.2, 1)
     print (p1)
