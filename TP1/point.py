@@ -16,13 +16,14 @@ class Point:
                   # 2eme option --> ((self.__x-x)*(self.__x-x) + (self.__y-y)*(self.__y-y))
         return distance
 
- #   def distancePoint(self, camarade : Point):
+    def distancePoint(self, camarade : Point) -> float:
+        return ((self.__x - camarade.__x) ** 2 + (self.__y - camarade.__y) ** 2) ** 0.5
 
 class Cercle:
 
-    def __init__(self,centre:Point, rayon:int):
-        self.__centre = Point(centre)
+    def __init__(self,rayon:int, centre:Point, ):
         self.__rayon = rayon
+        self.__centre = Point(centre)
 
     def diametre(self,diametre:int):
         self.__diametre = 2*self.__rayon
@@ -42,12 +43,9 @@ class Cercle:
         else:
             return False
 
+    def partie(self,A: Point) -> bool:
+        return self.__centre.distancePoint(A) <= self.__rayon
 
-
-
-
-    def partie(self):
-        gdfkd
 
 
 
