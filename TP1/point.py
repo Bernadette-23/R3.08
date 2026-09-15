@@ -21,7 +21,7 @@ class Point:
 
 class Cercle:
 
-    def __init__(self,rayon:int, centre:Point, ):
+    def __init__(self,rayon:int, centre:Point ):
         self.__rayon = rayon
         self.__centre = Point(centre)
 
@@ -43,8 +43,28 @@ class Cercle:
         else:
             return False
 
-    def partie(self,A: Point) -> bool:
+    def partie(self, A: Point) -> bool:
         return self.__centre.distancePoint(A) <= self.__rayon
+
+
+class Rectangle:
+
+    def __init__(self, longueur : int = 1,hauteur : int = 1, point:Point):
+        self.__longueur = longueur
+        self.__hauteur = hauteur
+        self.__point = Point
+
+    def surfaceR(self, surfaceR : int ):
+        self.__surfaceR = self.__longueur*self.__hauteur
+        return surfaceR
+
+    def perimetreR(self, perimetreR : int):
+        self.__perimetreR = 2*(self.__longueur*self.__hauteur)
+        return perimetreR
+
+    
+
+
 
 
 if __name__ == "__main__":
