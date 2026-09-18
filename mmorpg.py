@@ -6,6 +6,27 @@ class Personnage:
         self.__pv = n
         self.__initiative = n
 
+    def __str__(self):
+        return f"Personnage {super().__str__()}"
+
+
+    def get_pv(self):
+        return self.__pv
+
+    def get_niveau(self):
+        return self.__niveau
+
+    def get_initiative(self):
+        return self.__initiative
+
+    def get_pseudo(self):
+        return self.__pseudo
+
+    def set_pv(self, valeur):
+        self.__pv = valeur
+
+    def set_initiative(self, valeur):
+        self.__initiative = valeur
 
     def attaquer(self, opposant : Personnage):
 
@@ -38,6 +59,8 @@ class Guerrier(Personnage):
         self.set_pv(n * 8 +4)
         self.set_initiative(n *4 +6)
 
+    def __str__(self):
+        return f"Guerrier {super().__str__()}"
 
 
 class Mage(Personnage):
@@ -49,11 +72,11 @@ class Mage(Personnage):
         self.__mana = n*5
 
 
-
-
-
 if __name__ == '__main__':
-    gerrier1 = Guerrier('Gerrier1', 2)
+
+    guerrier1 = Guerrier('Gerrier1', 2)
     mage1 = Mage('Mage1', 3)
-    gerrier1.attaquer(mage1)
-    mage1.combat(gerrier1)
+    print(vars(guerrier1))
+    guerrier1.combat(mage1)
+    print(f"{guerrier1.get_pseudo()} a {guerrier1.get_pv()} PV et {mage1.get_pseudo()} a {mage1.get_pv()} PV")
+    print(guerrier1)
