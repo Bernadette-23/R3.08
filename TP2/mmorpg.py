@@ -24,8 +24,16 @@ class Personnage:
 
     def combat(self, opposant : Personnage):
 
-         while self.__pv  and opposant.__pv > 0:
+         while self.__pv > 0 and opposant.__pv > 0:
              self.attaquer(opposant)
+
+    def soigner(self):
+         self.__pv =  self.__niveau
+
+
+
+
+
 
 
 
