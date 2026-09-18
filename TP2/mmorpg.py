@@ -8,29 +8,26 @@ class Personnage:
 
     def attaquer(self, opposant : Personnage):
 
-        if opposant.__initiative > self.__initiative:
-            self.__pseudo -= self.__pv
+        if self.__initiative > opposant.__initiative:
+            opposant.__pv -= self.__niveau
+            if opposant.__pv > 0:
+                self.__pv -= opposant.__niveau
 
+        elif opposant.__initiative > self.__initiative:
+            self.__pv -= opposant.__niveau
             if self.__pv > 0:
-                self.__opposant -= self.__opposant.pv
+                opposant.__pv -= self.__niveau
 
-        elif opposant.__initiative < self.__initiative:
-            self.__opposant -= self.__opposant.__pv
-
-            if self.__oppoqant.__pv > 0:
-                self.__pseudo -= self.__pv
-
-        else :
-            self.__pseudo -= self.__pv
-            self.__opposant -= self.__opposant.__pv
+        else:
+            self.__pv -= opposant.__niveau
+            opposant.__pv -= self.__niveau
 
     def combat(self, opposant : Personnage):
 
-        for pv in range opposant.__pv > 0:
+         while self.__pv  and opposant.__pv > 0:
+             self.attaquer(opposant)
 
-            attaquer
 
-        or while self.__pv > 0:
 
 
 
